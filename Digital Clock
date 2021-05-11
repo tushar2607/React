@@ -1,0 +1,18 @@
+import React,{useState} from 'react';
+const App = () =>{
+    let nTime= new Date().toLocaleTimeString();
+const[count,setCount]=useState(nTime);
+const incNum = () =>{
+    nTime= new Date().toLocaleTimeString();
+   setCount(nTime);
+};
+   setInterval(incNum,1000);
+
+return(
+    <>
+    <h1 >{count}</h1>
+    
+     </>
+);
+};
+export default App;
